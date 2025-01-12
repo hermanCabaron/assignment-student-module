@@ -20,5 +20,13 @@ export class StudentController {
   async findOne(@Param('id') id: number): Promise<Student> {
     return this.studentService.findOne(id);
   }
+
+  @Patch(':id')
+  async update(
+    @Param('id') id: number,
+    @Body() student: Partial<Student>,
+  ): Promise<Student> {
+    return this.studentService.update(id, student);
+  }
 }
 
