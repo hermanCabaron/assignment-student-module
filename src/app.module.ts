@@ -14,7 +14,7 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       password: '',
       database: 'assignment4-5',
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
-      synchronize: true,
+      synchronize: false,
     }),
     StudentModule],
   controllers: [AppController],
